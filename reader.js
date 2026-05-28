@@ -404,6 +404,16 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// --- Keep --toolbar-height in sync with the wrapped toolbar ---------------
+// On mobile the toolbar wraps to a variable number of rows, so its height is
+// not a value CSS can know ahead of time. Measure the real rendered height
+// and feed it into the --toolbar-height variable that positions
+// #viewer-container (and the find bar / TOC) below the toolbar.
+const toolbar = $("reader-toolbar");
+new ResizeObserver(() => {
+  root.style.setProperty("--toolbar-height", toolbar.offsetHeight + "px");
+}).observe(toolbar);
+
 // --- Window resize re-flow ------------------------------------------------
 
 let resizeTimeout = null;
