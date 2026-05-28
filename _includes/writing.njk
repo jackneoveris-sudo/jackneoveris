@@ -1,0 +1,12 @@
+---
+layout: base.njk
+navActive: writings
+---
+<article class="writing">
+  <h1>{{ title }}</h1>
+  <span class="entry-date">{{ date | readableDate }}</span>
+  <div class="ornament">❦</div>
+  {{ content | safe }}
+  <div class="ornament">☉</div>
+  <p style="text-align: center;"><a href="/writings.html">← Back to Writings</a></p>
+</article>

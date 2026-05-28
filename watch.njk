@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Watch
+description: Videos, talks, and recordings from the Amovera project.
+navActive: watch
+permalink: /watch.html
+---
+<h1>Watch</h1>
+<p class="subtitle">— talks, readings, and recordings —</p>
+
+<div class="ornament">❦</div>
+
+{% if collections.watch | length %}
+{% for entry in collections.watch %}
+<div class="watch-entry">
+  <h2>{{ entry.data.title }}</h2>
+  <span class="entry-date">{{ entry.date | readableDate }}</span>
+  {% set vid = entry.data.youtube | youtubeId %}
+  {% if vid %}
+  <div class="video-embed">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ vid }}" title="{{ entry.data.title }}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  {% else %}
+  <p><a href="{{ entry.data.youtube }}">Watch on YouTube →</a></p>
+  {% endif %}
+  {% if entry.data.description %}<p>{{ entry.data.description }}</p>{% endif %}
+</div>
+{% endfor %}
+{% else %}
+<p class="lead"><em>Recordings coming soon.</em></p>
+{% endif %}

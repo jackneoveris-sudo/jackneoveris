@@ -1,0 +1,42 @@
+# Decap CMS configuration for jackneoveris.com.
+# Backend is Netlify Git Gateway: edits are committed straight to the main
+# branch (no drafts / editorial workflow), which triggers a Netlify rebuild.
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://jackneoveris.com
+display_url: https://jackneoveris.com
+
+# Uploaded images for writings (matches the Eleventy passthrough and the posts).
+media_folder: "images/writings"
+public_folder: "/images/writings"
+
+collections:
+  - name: "writings"
+    label: "Writings"
+    label_singular: "Writing"
+    folder: "content/writings"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "watch"
+    label: "Watch"
+    label_singular: "Watch entry"
+    folder: "content/watch"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "YouTube URL", name: "youtube", widget: "string", hint: "Paste any YouTube link, e.g. https://youtu.be/XXXX or https://www.youtube.com/watch?v=XXXX" }
+      - { label: "Description", name: "description", widget: "text" }

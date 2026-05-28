@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Writings
+description: Essays, manifestos, and longer documents from the Amovera project.
+navActive: writings
+permalink: /writings.html
+---
+<h1>Writings</h1>
+<p class="subtitle">— working papers of the project —</p>
+
+<div class="ornament">❦</div>
+
+<p class="lead">
+  A gathering place for essays, manifestos, and longer documents — published as
+  they reach a form fit to circulate.
+</p>
+
+{% if collections.writings | length %}
+<ul class="index-list">
+  {% for post in collections.writings %}
+  <li>
+    <a href="{{ post.url }}">
+      <div class="title">{{ post.data.title }}</div>
+      <div class="desc">
+        <span class="entry-date">{{ post.date | readableDate }}</span>
+        {{ post.data.summary }}
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p style="text-align: center; color: var(--ink-faded); font-style: italic;">More to come.</p>
+{% endif %}
+
+<div class="ornament">☉</div>
+
+<aside class="marginalia">
+  Many of the working documents of this project are currently held in private project environments and circulated only on request. The intention is to make more of them public over time as they reach forms ready to stand outside their development context.
+</aside>

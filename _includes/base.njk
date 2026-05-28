@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — Jack of Suits</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80' fill='%239a7b2e'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/index.html" class="brand">Jack <span class="ampersand">of</span> Suits</a>
+    <nav class="site-nav">
+      <a href="/index.html"{% if navActive == "home" %} class="active"{% endif %}>Home</a>
+      <a href="/creating-ethics.html"{% if navActive == "book" %} class="active"{% endif %}>The Book</a>
+      <a href="/amovera.html"{% if navActive == "amovera" %} class="active"{% endif %}>Amovera</a>
+      <a href="/writings.html"{% if navActive == "writings" %} class="active"{% endif %}>Writings</a>
+      <a href="/watch.html"{% if navActive == "watch" %} class="active"{% endif %}>Watch</a>
+      <a href="/about.html"{% if navActive == "about" %} class="active"{% endif %}>About</a>
+      <a href="/contact.html"{% if navActive == "contact" %} class="active"{% endif %}>Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <span class="glyph">☉ ☽ ☿</span>
+  <p>Jack M. N. Gladstone &middot; writing under the four suits</p>
+  <p><a href="/contact.html">Contact</a> &middot; <a href="https://amovera.net">amovera.net</a></p>
+  <p style="margin-top: 1.2rem; font-size: 0.85rem; opacity: 0.7;">&copy; 2026 &middot; All rights reserved.</p>
+</footer>
+
+</body>
+</html>
