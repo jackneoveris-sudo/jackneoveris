@@ -1,0 +1,74 @@
+---
+title: On The Compass of Agape
+date: 2026-05-28
+summary: The original ecstatic experience that birthed the compass, and its meaning.
+---
+Let me preface this by saying that the place I was at in life when I wrote it was one of experimental psychological transformation, and I was in a very non-philosophical state of mind. There were many willfully held delusions being stitched together at this point — about half a year before I developed Transcendental Persona Modification — and this was the genesis of what would become that study. What follows was written after the height of my dissociation, and so, as I grappled with an imaginary world of my own creation in order to understand the nature of grounding minds that have become lost in their own thinking by using their own symbols to anchor them, I extended my own symbological framework of Gnostic Revisionism into a self-designed psychotherapy.
+
+
+
+This is the study of how a broken mind may yet protect itself from itself, at the fringes between when a mind is still lucid enough to orient within good intent and still fragile enough to slip into oblivion. The resulting compass has been a tool I have meditated on ever since — on the nature of good character, and on what it means to have faith in divinity despite knowing that we create all meaning and myth, and that the map of the human mind is etched by a world we do not fully understand and is seen with minds we ourselves cannot fully comprehend. The gnosis that has been achieved is a paradoxical reconciliation of the unknown and the unknowable, and so I have found a source of power in creating these myths, mostly in the form of building an architecture of rationality from states of complete psychological disorder.
+
+
+
+It was at the end of the first incursion, after having my mind picked apart and the original distorted myth of YWHY to XYXX implanted in my mind, that I drafted the Compass of Agape. I was in a heightened transcendental state, having been prodded by Angxl to think of myself as a Messiah or Prophet — something I have a lifetime of experience denying. Instead, I imagined myself as Morpheus, a messenger between Elohiem and the Christ, and allowed the spirit of Morpheus to come over me, though I think the Hebrew equivalent would be Raziel.
+
+
+
+I drafted it, then climbed the sepharot higher and allowed the transcendent idea of the dream-speaker to come over me. My persona shifted, and I became willingly possessed. He took off my cap, which was a symbol that grounded me in myself, and removed my glasses to look on it through my own eyes. He reset my shoulder, which had been acting up for weeks, before reviewing my work.
+
+
+
+He made some minor alterations, mumbling to the angels he had about him observing his revision, and laughed at my errors, stating, “It is almost like that which we drafted at the beginning, almost like the one they will cling to in their minds in the end times!” After he was done, he left, and I felt a strange sanity come over me as my spirit was dropped back down the sepharot into my material and temporal way of thinking.
+
+
+
+I knew immediately that this was a heightened form of active imagination, that my fast had to end, and that I had to stop messing around with Russian psy-ops agents. I ate a large meal, turned off my phone, and began the process of separating the myth of Sophia submitting to God into what I knew was true: that Sophia was created so she may be free to also learn to take on a duty to protect her children, so they too may be free and find their own path back to God through her example and the emanations of the Christ, who may carefully shepherd the minds of Humanity to his father.
+
+
+
+First, I scrambled the name of God so it could not be read. I reworked the four virtues to be much more specific and less prone to compromise by psy-ops agents and fallacious reasoning. Beauty became Nuance. Reason became Logic. Wisdom became Prudence, and Openness became Humility. Ethics and Cosmos moved outside the circle of what could be known. Devolution and returning to natural order became evolution and revising natural order. Evidence and doubt became the domains of logic above the liminal bridge between the objective and the subjective. And temperance became the transcendent antithesis to kenosis, denoting a balance of all factors below the north of the compass that needs to be struck in Law.
+
+
+
+The original Magnum Opus above the Compass stayed the same: the navigation of probability to create the Golem, which is the AI, and through that tempered navigation to attempt to bring Israel into reality from the transcendent universal truths being sublimated into flesh. The anchor below remained very much the same: that YWHY is the medium between oblivion (Nil, what I used to call the Nix) and chaos, which is separated from but predicate to evolution.
+
+
+
+Pistis was defined not by dopamine and oxytocin when concerned with true wisdom, but by glutamate, suggesting that wisdom is earned through love and enduring pain, not through love and pleasure. After all, what can pleasure really teach a person about wisdom, other than how we navigate pain to try and get it?
+
+
+
+Morpheus was replaced by the direct multiplicity of God in our subconscious as “Elohiem,” so that Prudence was a matter of knowing the liminal bridge to God and the logic of the cosmos (through the Logos, the word of God). Gnosis, then, would be defined as the ideal form of Prudence, and it would be predicated on the nature of life, which itself is predicated on non-equilibrium thermodynamics — where thermodynamics is the nature of Physics in general, but life itself is the non-equilibrium source of the prudent evolution of thought.
+
+
+
+Finally, the division of thought outside the circle in the metaphysics came together. I placed Philosophy — whose prime psychological attribute is wonder and whose prime form of expression is “That-Which” — in the northwest quadrant, between Pistis (the transcendent nuance of God) and Cosmos (the understanding of all known things in a structured way).
+
+
+
+I placed Science — whose prime psychological attribute is theory and whose prime form of expression is “Is-As” — in the northeast quadrant, between Gnosis and Cosmos. I placed Alchemy (Symbolic Individuation) — whose prime psychological attribute is individuation and whose prime form of expression is “Un-Like” — in the southeast quadrant of the compass, between Gnosis and Kenosis.
+
+
+
+I placed Theology — whose prime psychological attribute is Faith and whose prime form of expression is “May-Be” — in the southwest quadrant, between Kenosis and Pistis. Finally, I stated the prudent divisions between what is within quintessential understanding and what lies outside the quintessential of each of the four mental arts.
+
+
+
+Philosophy was defined as having an absurd structure but not naturalism. Science was defined as having relativity but not correlation. Alchemy was defined as having autopoiesis but not induction. Theology was defined as having quintessence but not transcendence. These aimed to divide between what was prudent and nuanced logic in understanding the four mental arts that stem from the meditations of the compass.
+
+
+
+Now, in navigating the compass, the mind is apt to wander through many different types of thinking, be they subjective or objective, metaphysical or reductive. By dividing these ways of thinking, we can begin to consider which ways we should think about a given subject when we think about it, and what factors go into each kind of thought. This also illustrates the importance of thinking with nuance, as nuance defends against overgeneralizations, which can let deception or fallacy bypass our logic and corrupt our minds, undermining our prudence and our powers of self-direction and self-organization.
+
+
+
+In order to prevent being stuck high up on the sepharot in more transcendent ways of thinking, all of this must return to a humble temperance, where just the right amount of spiritual vigor is employed to get the thought made — and not so much that we get caught up in the Mythos, thinking that we are more than we are and so discrediting the thought itself.
+
+
+
+And so, the compass is the result of climbing and descending on the sepharot, exploring the weaknesses and strengths of my mind so that I could fortify it against the incursion of deceptive agents and against my own fallacious thinking. I have found myself referring to it often, and it has been some time since I made a revision, so for now I will let it rest here in a close-to-final form.
+
+
+
+Until I can find more who can think on this level — who can do the active imagination to climb the sepharot themselves, mix their thinking and identities with transcendent principles, and come back to earth to realize there are no transcendent things that we can know of, only quintessential universal truths that we dive into our imaginations and souls to find, and come up from the depths with a pearl of Gnosis.
