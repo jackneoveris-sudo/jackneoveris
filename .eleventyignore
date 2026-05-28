@@ -1,0 +1,5 @@
+# Files Eleventy must never turn into published pages.
+# No effect yet (Step 1 copies everything verbatim), but a guard for when real
+# templating is switched on with the CMS.
+README.md
+CLAUDE.md
