@@ -411,4 +411,12 @@ html, body {
   #reader-root.sidebar-open #viewer-container {
     left: 0;
   }
+
+  /* Toolbar height is `auto` on mobile, so top:var(--toolbar-height) left the
+     viewer with no fixed top and it sized to content — no scroll region, so
+     swipes fell through to the parent page. Pin top:0 so top+bottom give it a
+     real height that overflow:auto can scroll. */
+  #viewer-container {
+    top: 0;
+  }
 }
