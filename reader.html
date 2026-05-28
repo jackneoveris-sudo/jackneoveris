@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating Ethics — Reader</title>
+
+  <!-- Mozilla PDF.js viewer CSS (provides the page rendering layer styles) -->
+  <link rel="stylesheet" href="pdfjs/web/pdf_viewer.css">
+
+  <!-- Our custom skin overlays the default styles -->
+  <link rel="stylesheet" href="reader.css">
+</head>
+<body>
+
+<div id="reader-root">
+
+  <!-- Toolbar -->
+  <header id="reader-toolbar">
+    <div class="tool-group tool-group-left">
+      <button id="prev-page" type="button" title="Previous page" aria-label="Previous page">‹</button>
+      <span id="page-info">
+        <input id="page-input" type="text" inputmode="numeric" value="1" aria-label="Page number">
+        <span class="page-divider">of</span>
+        <span id="page-total">—</span>
+      </span>
+      <button id="next-page" type="button" title="Next page" aria-label="Next page">›</button>
+    </div>
+
+    <div class="tool-group tool-group-center">
+      <button id="toggle-find" type="button" title="Search the text" aria-label="Search">⌕</button>
+      <button id="toggle-toc" type="button" title="Contents" aria-label="Contents">☰</button>
+    </div>
+
+    <div class="tool-group tool-group-right">
+      <button id="zoom-out" type="button" title="Zoom out" aria-label="Zoom out">−</button>
+      <select id="zoom-select" aria-label="Zoom level">
+        <option value="auto">Auto</option>
+        <option value="page-fit">Page Fit</option>
+        <option value="page-width">Page Width</option>
+        <option value="0.75">75%</option>
+        <option value="1" selected>100%</option>
+        <option value="1.25">125%</option>
+        <option value="1.5">150%</option>
+        <option value="2">200%</option>
+      </select>
+      <button id="zoom-in" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+    </div>
+  </header>
+
+  <!-- Find bar (collapsed by default) -->
+  <div id="find-bar" hidden>
+    <input id="find-input" type="text" placeholder="Search the text…" aria-label="Search">
+    <button id="find-prev" type="button" title="Previous match" aria-label="Previous match">‹</button>
+    <button id="find-next" type="button" title="Next match" aria-label="Next match">›</button>
+    <span id="find-status"></span>
+    <button id="find-close" type="button" title="Close search" aria-label="Close search">✕</button>
+  </div>
+
+  <!-- Sidebar / TOC (collapsed by default) -->
+  <aside id="toc-sidebar" hidden>
+    <h2>Contents</h2>
+    <nav id="toc-list">
+      <p class="toc-empty">Loading…</p>
+    </nav>
+  </aside>
+
+  <!-- Main viewer area -->
+  <div id="viewer-container">
+    <div id="viewer" class="pdfViewer"></div>
+  </div>
+
+  <!-- Initial loading state -->
+  <div id="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-glyph">☉ ☽ ☿</div>
+      <p>Opening the book…</p>
+      <div class="loading-bar"><div class="loading-bar-fill" id="loading-progress"></div></div>
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="reader.js"></script>
+
+<!--
+  Fail-loud guard. If reader.js (an ES module) never executes — most often
+  because the host served the .mjs files with the wrong MIME type, or the page
+  was opened over file:// — the loading overlay would otherwise sit on
+  "Opening the book…" forever with no explanation. This classic script sets a
+  flag once the module runs; if the flag is still unset after a few seconds,
+  we replace the overlay text with an actionable message instead of hanging.
+-->
+<script>
+  window.__readerModuleStarted = false;
+  window.addEventListener("error", function (e) {
+    if (e && e.message && /module script|MIME type/i.test(e.message)) {
+      showReaderError(
+        "The reader's scripts were blocked by the server (wrong file type for .mjs modules). " +
+        "If you host this yourself, serve .mjs files as application/javascript — see netlify.toml / _headers / .htaccess in the site folder."
+      );
+    }
+  });
+  setTimeout(function () {
+    if (!window.__readerModuleStarted) {
+      showReaderError(
+        "The book viewer didn't start. This usually means the page was opened directly from a file (file://) " +
+        "or the server is serving the .mjs module files with the wrong type. Try the Download PDF button, " +
+        "or serve the site over http/https with correct MIME types."
+      );
+    }
+  }, 8000);
+  function showReaderError(msg) {
+    var o = document.getElementById("loading-overlay");
+    if (!o) return;
+    var p = o.querySelector("p");
+    if (p) p.textContent = msg;
+    var bar = o.querySelector(".loading-bar");
+    if (bar) bar.style.display = "none";
+  }
+</script>
+</body>
+</html>

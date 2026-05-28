@@ -1,0 +1,414 @@
+/* ============================================================
+   reader.css — alchemical-textbook skin for the PDF.js viewer
+   Imported AFTER pdfjs/web/pdf_viewer.css so we can override.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&family=IM+Fell+English+SC&display=swap');
+
+:root {
+  --parchment: #f4ecd8;
+  --parchment-deep: #ebe0c4;
+  --parchment-shadow: #d9c9a3;
+  --ink: #2a1f14;
+  --ink-soft: #4a3826;
+  --ink-faded: #6b5638;
+  --gold: #9a7b2e;
+  --gold-bright: #c4a052;
+  --gold-deep: #6b5420;
+  --crimson: #6b1f1f;
+  --rule: rgba(106, 84, 32, 0.35);
+  --rule-strong: rgba(106, 84, 32, 0.55);
+  --toolbar-height: 52px;
+  --findbar-height: 48px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  height: 100%;
+  background: var(--parchment-deep);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--ink);
+  overflow: hidden;
+}
+
+#reader-root {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ---------- Toolbar ---------- */
+#reader-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--toolbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background:
+    linear-gradient(to bottom, var(--parchment), var(--parchment-deep));
+  border-bottom: 1px double var(--rule-strong);
+  box-shadow: 0 1px 0 rgba(154, 123, 46, 0.15);
+  gap: 1rem;
+  z-index: 50;
+}
+
+.tool-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+#reader-toolbar button,
+#reader-toolbar select {
+  font-family: 'Cormorant Garamond', serif;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ink-soft);
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 180ms, color 180ms, border-color 180ms;
+  border-radius: 2px;
+}
+
+#reader-toolbar button:hover {
+  background: rgba(154, 123, 46, 0.12);
+  border-color: var(--rule);
+  color: var(--gold-deep);
+}
+
+#reader-toolbar button.active {
+  background: rgba(154, 123, 46, 0.18);
+  border-color: var(--gold);
+  color: var(--gold-deep);
+}
+
+#reader-toolbar button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+#page-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  padding: 0 0.4rem;
+}
+
+#page-input {
+  width: 3.2rem;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--ink);
+  padding: 0.2rem;
+  outline: none;
+}
+
+#page-input:focus {
+  border-bottom-color: var(--gold);
+}
+
+.page-divider {
+  font-style: italic;
+  color: var(--ink-faded);
+  font-size: 0.9rem;
+}
+
+#page-total {
+  font-style: italic;
+  color: var(--ink-faded);
+}
+
+#zoom-select {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  min-width: 110px;
+  height: 32px;
+  padding: 0 0.5rem;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+#zoom-select:hover {
+  border-color: var(--gold);
+  color: var(--gold-deep);
+}
+
+/* ---------- Find bar ---------- */
+#find-bar {
+  position: absolute;
+  top: var(--toolbar-height);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--parchment);
+  border: 1px solid var(--rule-strong);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 12px rgba(42, 31, 20, 0.18);
+  z-index: 60;
+  height: var(--findbar-height);
+}
+
+#find-bar[hidden] { display: none; }
+
+#find-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  padding: 0.3rem 0.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--ink);
+  width: 260px;
+  outline: none;
+}
+
+#find-input:focus { border-bottom-color: var(--gold); }
+
+#find-bar button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ink-soft);
+  width: 30px; height: 30px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 1.05rem;
+  transition: background 180ms, color 180ms, border-color 180ms;
+}
+
+#find-bar button:hover {
+  background: rgba(154, 123, 46, 0.12);
+  border-color: var(--rule);
+  color: var(--gold-deep);
+}
+
+#find-status {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 0.85rem;
+  color: var(--ink-faded);
+  letter-spacing: 0.04em;
+  min-width: 80px;
+  font-style: italic;
+}
+
+/* ---------- TOC Sidebar ---------- */
+#toc-sidebar {
+  position: absolute;
+  top: var(--toolbar-height);
+  left: 0;
+  width: 280px;
+  height: calc(100vh - var(--toolbar-height));
+  background: var(--parchment);
+  border-right: 1px solid var(--rule-strong);
+  overflow-y: auto;
+  padding: 1.4rem 1.2rem;
+  z-index: 40;
+  box-shadow: 2px 0 10px rgba(42, 31, 20, 0.08);
+}
+
+#toc-sidebar[hidden] { display: none; }
+
+#toc-sidebar h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+#toc-list a {
+  display: block;
+  padding: 0.4rem 0.2rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  border-bottom: 1px dotted transparent;
+  transition: color 180ms, border-color 180ms;
+}
+
+#toc-list a:hover {
+  color: var(--gold-deep);
+  border-bottom-color: var(--gold);
+}
+
+#toc-list .toc-level-1 { padding-left: 0; font-weight: 500; }
+#toc-list .toc-level-2 { padding-left: 1rem; font-size: 0.92rem; }
+#toc-list .toc-level-3 { padding-left: 2rem; font-size: 0.88rem; font-style: italic; }
+
+.toc-empty {
+  font-style: italic;
+  color: var(--ink-faded);
+  font-size: 0.95rem;
+}
+
+/* ---------- Viewer container ---------- */
+/* Must be absolutely positioned per PDFViewer constructor requirement */
+#viewer-container {
+  position: absolute;
+  top: var(--toolbar-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background:
+    radial-gradient(ellipse at top, rgba(154, 123, 46, 0.05), transparent 60%),
+    var(--parchment-deep);
+  padding: 1.5rem 0;
+  transition: left 220ms ease;
+}
+
+#reader-root.sidebar-open #viewer-container {
+  left: 280px;
+}
+
+/* PDF.js viewer override — center pages, give them a nice card look */
+.pdfViewer {
+  margin: 0 auto;
+}
+
+.pdfViewer .page {
+  margin: 0 auto 1.5rem;
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 0 rgba(154, 123, 46, 0.15),
+    0 6px 20px rgba(42, 31, 20, 0.18);
+  background-color: #fdfaf2;
+  background-clip: content-box;
+}
+
+/* Override the default text-selection highlight color */
+.pdfViewer .textLayer ::selection {
+  background: rgba(196, 160, 82, 0.4);
+}
+
+/* Find-match highlight (PDF.js applies these class names) */
+.pdfViewer .textLayer .highlight {
+  background: rgba(196, 160, 82, 0.35);
+  border-radius: 2px;
+}
+.pdfViewer .textLayer .highlight.selected {
+  background: rgba(154, 123, 46, 0.55);
+}
+
+/* ---------- Loading overlay ---------- */
+#loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--parchment);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  transition: opacity 400ms ease;
+}
+
+#loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+  max-width: 320px;
+}
+
+.loading-glyph {
+  font-size: 2rem;
+  color: var(--gold);
+  letter-spacing: 1rem;
+  margin-bottom: 1.2rem;
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.loading-content p {
+  font-family: 'IM Fell English SC', serif;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 2px;
+  background: var(--rule);
+  overflow: hidden;
+  border-radius: 1px;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--gold), var(--gold-bright));
+  transition: width 300ms ease;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  :root { --toolbar-height: auto; }
+
+  #reader-toolbar {
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    gap: 0.4rem;
+    justify-content: center;
+  }
+
+  .tool-group {
+    gap: 0.2rem;
+  }
+
+  #reader-toolbar button,
+  #reader-toolbar select {
+    width: 32px;
+    height: 32px;
+    font-size: 1.05rem;
+  }
+
+  #find-input { width: 160px; }
+
+  #toc-sidebar {
+    width: 85%;
+    max-width: 320px;
+  }
+
+  #reader-root.sidebar-open #viewer-container {
+    left: 0;
+  }
+}

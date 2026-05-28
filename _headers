@@ -1,0 +1,12 @@
+# MIME-type fix for ES modules — works on Netlify and Cloudflare Pages.
+# Duplicate of the netlify.toml rule, in the format some hosts prefer.
+# If a host reads only one of these files, having both is harmless.
+
+/*.mjs
+  Content-Type: application/javascript; charset=utf-8
+
+/pdfjs/build/*.mjs
+  Content-Type: application/javascript; charset=utf-8
+
+/pdfjs/web/*.mjs
+  Content-Type: application/javascript; charset=utf-8

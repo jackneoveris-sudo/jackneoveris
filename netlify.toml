@@ -1,0 +1,25 @@
+# Forces the correct JavaScript MIME type for ES module (.mjs) files.
+#
+# Why this exists:
+#   Browsers enforce strict MIME-type checking for ES modules. If the host
+#   serves a .mjs file as text/plain or application/octet-stream, the browser
+#   REFUSES to run it, the reader's script never starts, and the book page
+#   freezes on "Opening the book…" with no visible error.
+#
+#   Netlify (and most static hosts) do not always send the right type for
+#   .mjs out of the box. These rules force it.
+
+[[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+[[headers]]
+  for = "/pdfjs/build/*.mjs"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+[[headers]]
+  for = "/pdfjs/web/*.mjs"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"

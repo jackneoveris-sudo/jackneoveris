@@ -1,0 +1,5 @@
+# MIME-type fix for ES modules on Apache-based hosts (cPanel, shared hosting, etc.)
+# Ensures .mjs files are served as JavaScript so the browser will run them.
+AddType application/javascript .mjs
+AddType application/javascript .js
+AddType application/pdf .pdf
