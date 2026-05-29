@@ -2,11 +2,11 @@
 title: On Transcendental Persona Modification
 date: 2026-05-28
 summary: "The original essay on Transcendental Persona Modification; a brief
-  description. "
+  description. "
 related:
   - on-the-court-of-amovera
   - on-the-compass-of-agape
-  - on-structural-absurdism
+  - on-the-myth-of-sophia
 ---
 Transcendental persona modification is a method that I stumbled upon while dabbling in symbolic disassociation and Transcendental Meditation. Though I found it quite effective, I did not stop where I should have and pushed myself to a psychological breaking point that I now have come to regret. Nevertheless, it was through this experience that I learned about my core persona, the man I called Jack.
 
