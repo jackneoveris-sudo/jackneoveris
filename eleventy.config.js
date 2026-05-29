@@ -36,6 +36,14 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // ISO 8601 form of a date, e.g. "2026-01-15T00:00:00.000Z" — used for
+  // article:published_time and the JSON-LD datePublished/dateModified, which
+  // require a machine-readable timestamp rather than the human "readableDate".
+  eleventyConfig.addFilter("isoDate", (value) => {
+    const d = value instanceof Date ? value : new Date(value);
+    return d.toISOString();
+  });
+
   // Pull the 11-character video id out of any common YouTube URL form
   // (watch?v=, youtu.be/, embed/, shorts/, v/). Returns "" if none found.
   eleventyConfig.addFilter("youtubeId", (url) => {

@@ -1,0 +1,55 @@
+{#
+  Reusable <head> metadata partial — SEO, Open Graph, Twitter Card and JSON-LD.
+
+  Driven entirely by page data; nothing is hand-entered per post:
+    title       -> <title>, og:title, twitter:title, JSON-LD headline
+    summary     -> description, og/twitter description, JSON-LD description
+    date        -> article:published_time, JSON-LD datePublished/dateModified
+    page.url    -> canonical / og:url (made absolute via site.url)
+    image       -> per-post share image (optional, root-relative); falls back
+                   to site.defaultShareImage
+    ogType      -> "article" on individual posts; anything else is a plain page
+                   (no article:* tags, no JSON-LD block)
+
+  The author is always the pen name from _data/site.json — never a legal name.
+#}
+{%- set pageDesc = description or summary -%}
+{%- set pageUrl = site.url + page.url -%}
+{%- set shareImg = (site.url + image) if image else site.defaultShareImage -%}
+{%- set isArticle = (ogType == "article") -%}
+  <title>{{ title }} — {{ site.name }}</title>
+  {% if pageDesc %}<meta name="description" content="{{ pageDesc }}">{% endif %}
+  <meta name="author" content="{{ site.author }}">
+  <link rel="canonical" href="{{ pageUrl }}">
+
+  <meta property="og:type" content="{{ 'article' if isArticle else 'website' }}">
+  <meta property="og:title" content="{{ title }}">
+  {% if pageDesc %}<meta property="og:description" content="{{ pageDesc }}">{% endif %}
+  <meta property="og:url" content="{{ pageUrl }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:image" content="{{ shareImg }}">
+  {%- if isArticle %}
+  <meta property="article:published_time" content="{{ date | isoDate }}">
+  <meta property="article:author" content="{{ site.author }}">
+  {%- endif %}
+
+  <meta name="twitter:card" content="{{ 'summary_large_image' if shareImg else 'summary' }}">
+  <meta name="twitter:title" content="{{ title }}">
+  {% if pageDesc %}<meta name="twitter:description" content="{{ pageDesc }}">{% endif %}
+  <meta name="twitter:image" content="{{ shareImg }}">
+  {%- if isArticle %}
+  <script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": pageDesc,
+  "datePublished": date | isoDate,
+  "dateModified": date | isoDate,
+  "author": { "@type": "Person", "name": site.author },
+  "publisher": { "@type": "Person", "name": site.author },
+  "mainEntityOfPage": pageUrl,
+  "image": shareImg
+} | dump(2) | safe }}
+  </script>
+  {%- endif %}
