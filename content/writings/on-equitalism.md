@@ -1,7 +1,11 @@
 ---
 title: On Equitalism
 date: 2026-05-28
-summary: The first attempt to flesh out the idea off an equalist economy.
+summary: The first attempt to flesh out the idea off an equalist economy.
+related:
+  - on-autonomous-nations
+  - on-s-t-a-m-p
+  - on-the-sovereign-blueprint
 ---
 
 

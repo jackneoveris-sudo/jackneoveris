@@ -2,7 +2,11 @@
 title: On Autonomous Nations
 date: 2026-05-28
 summary: The very first copy of the manifesto on Autonomous Nations, which would
-  later evolve into the current theory.
+  later evolve into the current theory.
+related:
+  - on-s-t-a-m-p
+  - on-equitalism
+  - on-the-sovereign-blueprint
 ---
 This piece also requires a preface to do it justice. It is long past the time since the euphoria of writing this text has faded away, and it was in all honesty written at the worst of times in my life. I was not well when I wrote this, but then again, I was not wrong about what I wrote, so I kept it since, built on it, advanced it from the original concept of the Autonomous Nations of Canada and distilled it into the current Autonomous Nations Theory that was written beneath this manifestos fiery ambitions.
 

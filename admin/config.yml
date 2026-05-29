@@ -27,6 +27,17 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Share image", name: "image", widget: "image", required: false, hint: "Optional. Shown when this post is shared on social media. If left blank, the site's default share image is used. Best at 1200×630." }
       - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Continue reading"
+        name: "related"
+        widget: "relation"
+        collection: "writings"
+        search_fields: ["title"]
+        value_field: "{{slug}}"
+        display_fields: ["title"]
+        multiple: true
+        required: false
+        max: 3
+        hint: "Pick up to 3 related essays. Order matters — they appear in a Continue Reading block at the foot of the post."
 
   - name: "watch"
     label: "Watch"

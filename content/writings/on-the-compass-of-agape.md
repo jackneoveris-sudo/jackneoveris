@@ -2,7 +2,11 @@
 title: On The Compass of Agape
 date: 2026-05-28
 summary: The original ecstatic experience that birthed the compass, and its meaning.
-image: /images/writings/02-9-compass-of-agape.jpg
+image: /images/writings/02-9-compass-of-agape.jpg
+related:
+  - on-structural-absurdism
+  - on-transcendental-persona-modification
+  - on-the-court-of-amovera
 ---
 Let me preface this by saying that the place I was at in life when I wrote it was one of experimental psychological transformation, and I was in a very non-philosophical state of mind. There were many willfully held delusions being stitched together at this point — about half a year before I developed Transcendental Persona Modification — and this was the genesis of what would become that study. What follows was written after the height of my dissociation, and so, as I grappled with an imaginary world of my own creation in order to understand the nature of grounding minds that have become lost in their own thinking by using their own symbols to anchor them, I extended my own symbological framework of Gnostic Revisionism into a self-designed psychotherapy.
 

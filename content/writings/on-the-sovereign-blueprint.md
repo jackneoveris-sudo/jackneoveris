@@ -2,7 +2,11 @@
 title: On the Sovereign Blueprint
 date: 2026-05-28
 summary: An overview of the systems as a whole, how they fit together, written
-  with AI assistance.
+  with AI assistance.
+related:
+  - on-sovereign-theory
+  - on-amovera-constitutional-architecture
+  - on-structural-absurdism
 ---
 THE SOVEREIGN BLUEPRINT
 

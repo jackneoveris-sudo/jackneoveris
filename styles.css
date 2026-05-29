@@ -544,6 +544,32 @@ form.contact-form button:hover {
   border: 1px solid var(--rule);
 }
 
+/* Curated "Continue Reading" block at the foot of a post. Rows reuse
+   .index-list so they read identically to the Writings index. */
+.continue-reading {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+.cr-ornament {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+.cr-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  text-align: center;
+  color: var(--gold-deep);
+  margin-bottom: 0.5rem;
+}
+.cr-list { margin: 0; }
+
 .watch-entry {
   padding: 1.8rem 0;
   border-bottom: 1px solid var(--rule);

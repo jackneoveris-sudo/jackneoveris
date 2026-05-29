@@ -1,7 +1,11 @@
 ---
 title: On Structural Absurdism
 date: 2026-05-28
-summary: Some introductory musings on philosophy.
+summary: Some introductory musings on philosophy.
+related:
+  - on-the-compass-of-agape
+  - on-the-sovereign-blueprint
+  - on-amovera-constitutional-architecture
 ---
 
 

@@ -2,7 +2,11 @@
 title: On S.T.A.M.P
 date: 2026-05-28
 summary: The rough concept of a grassroots activist movement oriented towards
-  the pursuit of sovereignty; an extension of Autonomous Nations Theory.
+  the pursuit of sovereignty; an extension of Autonomous Nations Theory.
+related:
+  - on-autonomous-nations
+  - on-the-court-of-amovera
+  - on-equitalism
 ---
 
 

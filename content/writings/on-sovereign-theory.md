@@ -2,7 +2,11 @@
 title: On Sovereign Theory
 date: 2026-05-28
 summary: "A machine consolidated essay on the general theoretical foundations of
-  the sovereign blueprint. "
+  the sovereign blueprint. "
+related:
+  - on-the-sovereign-blueprint
+  - on-amovera-constitutional-architecture
+  - on-structural-absurdism
 ---
 THEORETICAL FOUNDATIONS
 

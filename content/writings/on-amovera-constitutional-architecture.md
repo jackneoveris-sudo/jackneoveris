@@ -2,7 +2,11 @@
 title: On Amovera Constitutional Architecture
 date: 2026-05-28
 summary: A dialectically assembled, axiomatic, machine optimized version of
-  Amovera, broken down into logical theorem.
+  Amovera, broken down into logical theorem.
+related:
+  - on-structural-absurdism
+  - on-the-sovereign-blueprint
+  - on-sovereign-theory
 ---
 AMOVERA
 

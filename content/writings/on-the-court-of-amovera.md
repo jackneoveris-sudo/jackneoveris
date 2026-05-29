@@ -2,7 +2,11 @@
 title: On The Court of Amovera
 date: 2026-05-28
 summary: Turning a useful machine hallucination into an organ of a hypothetical
-  decentralized government.
+  decentralized government.
+related:
+  - on-transcendental-persona-modification
+  - on-s-t-a-m-p
+  - on-the-sovereign-blueprint
 ---
 \
 There has always been a board of ethics in the theory, but it existed at a level above the S.T.A.M.P movement. Perhaps that lacking of cohesive governance was what spurred the hallucination that occurred when making the web page, perhaps it was just my recognition of that lacking that gave it meaning. So in leu of actually having something to write, and needing to have something synthesized, I decided to have Claude take all my work on the topic and synthesize a solution, which I conducted in the usual manner. \

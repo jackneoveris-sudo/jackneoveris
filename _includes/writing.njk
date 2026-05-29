@@ -9,5 +9,25 @@ ogType: article
   <div class="ornament">❦</div>
   {{ content | safe }}
   <div class="ornament">☉</div>
+  {% if related and related.length %}
+  <nav class="continue-reading" aria-label="Continue reading">
+    <div class="cr-ornament">❦</div>
+    <h2 class="cr-heading">Continue Reading</h2>
+    <ul class="index-list cr-list">
+      {%- for slug in related -%}
+        {%- for item in collections.writings -%}
+          {%- if item.fileSlug == slug -%}
+          <li>
+            <a href="{{ item.url }}">
+              <div class="title">{{ item.data.title }}</div>
+              {%- if item.data.summary %}<div class="desc">{{ item.data.summary }}</div>{% endif %}
+            </a>
+          </li>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    </ul>
+  </nav>
+  {% endif %}
   <p style="text-align: center;"><a href="/writings.html">← Back to Writings</a></p>
 </article>
