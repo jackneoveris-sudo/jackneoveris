@@ -5,8 +5,8 @@ summary: The inspired writing that I used to restructure my ethos around the new
   philosophy
 related:
   - on-the-compass-of-agape
-  - on-transcendental-persona-modification
   - on-structural-absurdism
+  - on-the-protogenesis
 ---
 A brief preface on this piece, as it is not philosophy and not quite poetry either. I had been working on the deconstruction of Christian and Jewish mysticism into an anthropological study of ethics, when I had stumbled upon the principle of inverse moral reasoning, in that an ethic exists to counter the gross agro sexual instincts of a society and push it towards moral equilibrium.  This to me was the source of all authority of prophets and sages, so when considering the teachings of Jesus, the Kabbala and other historical gurus throughout the ages, I considered the effectiveness of their philosophy not to be based on the closeness of their teaching to reality, but the effectiveness of their mythos in bending the ethos of those who come into contact with it towards greater functionality through this trick of inverse moral reasoning. \
 \
