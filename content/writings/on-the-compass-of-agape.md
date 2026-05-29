@@ -41,5 +41,3 @@ And so, the compass is the result of climbing and descending on the sepharot, ex
 Until I can find more who can think on this level — who can do the active imagination to climb the sepharot themselves, mix their thinking and identities with transcendent principles, and come back to earth to realize there are no transcendent things that we can know of, only quintessential universal truths that we dive into our imaginations and souls to find, and come up from the depths with a pearl of Gnosis.
 
 ![Revised Compass of Agape](/images/writings/02-9-compass-of-agape.jpg "Compass of Agape")
-
-![]()
