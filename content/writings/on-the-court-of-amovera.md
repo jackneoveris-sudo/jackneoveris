@@ -9,8 +9,8 @@ There has always been a board of ethics in the theory, but it existed at a level
 \
 The following is an AI orchestrated version of the court of Amovera, one that is built off the experimental server of Project Anix, a test environment for AI and Equitalist economics. The result is a void filled, quite by accident and some techno magic, and one that I have read and approved as part of this ecosystem. You will realize there is a shamelessness of where I find good ideas, because at the end of the day, when one comes to me, synthetic, organic or authentic, I tend to put it to work. 
 
-\
- \
+
+
 The Court of Amovera
 
 An Organ of the Board of Ethics
