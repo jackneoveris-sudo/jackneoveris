@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% include "meta.njk" %}
   <link rel="stylesheet" href="/styles.css">
+  {# The Compass of Agape carries an interactive plate and its own skin. #}
+  {% if page.fileSlug == "on-the-compass-of-agape" %}<link rel="stylesheet" href="/compass.css">{% endif %}
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80' fill='%239a7b2e'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -34,6 +36,8 @@
   <p><a href="/contact.html">Contact</a> &middot; <a href="https://amovera.net">amovera.net</a></p>
   <p style="margin-top: 1.2rem; font-size: 0.85rem; opacity: 0.7;">&copy; 2026 &middot; All rights reserved.</p>
 </footer>
+
+{% if page.fileSlug == "on-the-compass-of-agape" %}<script src="/compass.js" defer></script>{% endif %}
 
 </body>
 </html>

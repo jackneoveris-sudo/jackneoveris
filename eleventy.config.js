@@ -10,9 +10,11 @@ module.exports = function (eleventyConfig) {
   // The pages, copied through unchanged.
   eleventyConfig.addPassthroughCopy("*.html");
 
-  // Styles and the reader's script (reader.js only — not this config file).
+  // Styles, and the page scripts by name (never this config file, and never
+  // anything Eleventy pulls in) — the reader and the Compass of Agape plate.
   eleventyConfig.addPassthroughCopy("*.css");
   eleventyConfig.addPassthroughCopy("reader.js");
+  eleventyConfig.addPassthroughCopy("compass.js");
 
   // The book and the entire vendored PDF.js library.
   eleventyConfig.addPassthroughCopy("*.pdf");

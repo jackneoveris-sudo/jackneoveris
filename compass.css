@@ -1,0 +1,302 @@
+/* ============================================================
+   compass.css — the interactive Compass of Agape
+   Used only by /writings/on-the-compass-of-agape/, which loads it
+   alongside compass.js. Colours and faces come from the site
+   variables in styles.css; nothing is hard-coded here.
+   ============================================================ */
+
+/* ---------- The plate ---------- */
+.compass-heading { text-align: center; }
+
+.compass-figure {
+  margin: 2.6rem 0 2rem;
+  /* The plate wants more room than the 760px prose column, so it breaks
+     out of it and centres on the page. body has overflow-x: hidden. */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(94vw, 900px);
+}
+
+.compass-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--ink);
+}
+
+/* Engraved-plate faces. The labels are set in the body serif so the
+   fixed SVG coordinates keep their spacing; only the hub is display. */
+.compass-figure text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  fill: var(--ink);
+  /* a parchment halo keeps every label legible where it crosses a rule */
+  paint-order: stroke;
+  stroke: var(--parchment);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+.compass-figure text.big {
+  font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+.compass-figure text.cmp-small { stroke-width: 3px; }
+
+/* Gold leaf on the secondary rules. */
+.compass-figure .cmp-gold { stroke: var(--gold); }
+
+/* The two red suits, drawn hollow as on a court card. */
+.compass-figure .cmp-suit-red {
+  fill: var(--parchment);
+  stroke: var(--crimson);
+  stroke-width: 1.6px;
+  paint-order: normal;
+}
+
+/* ---------- Selectable terms ---------- */
+.compass-figure text[data-term] {
+  cursor: pointer;
+  transition: fill 200ms;
+}
+
+@media (hover: hover) {
+  .compass-figure text[data-term]:hover { fill: var(--gold-deep); }
+}
+
+.compass-figure text[data-term][data-active] {
+  fill: var(--crimson);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 0.5px;
+}
+
+.compass-hint {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+
+/* ---------- The definition drawer ---------- */
+.cmp-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(42, 31, 20, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms;
+  z-index: 40;
+}
+
+.cmp-scrim[data-open="true"] { opacity: 1; }
+
+.cmp-panel {
+  position: fixed;
+  z-index: 50;
+  background: var(--parchment-deep);
+  color: var(--ink);
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: transform 450ms cubic-bezier(0.33, 0, 0.1, 1);
+}
+
+.cmp-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.1rem;
+  border: none;
+  background: none;
+  font: 400 1.7rem/0.7 'Cormorant Garamond', Georgia, serif;
+  color: var(--ink-faded);
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.cmp-close:hover { color: var(--crimson); }
+
+.cmp-kicker {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0 0 0.5rem;
+}
+
+.cmp-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  margin: 0 0 0.8rem;
+}
+
+.cmp-rule {
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin: 0 0 1.1rem;
+}
+
+.cmp-body p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 0.9rem;
+  text-align: left;
+}
+
+.cmp-body p:last-child { margin-bottom: 0; }
+
+.cmp-lead {
+  font-style: italic;
+  color: var(--gold-deep);
+}
+
+.cmp-lead:empty { display: none; }
+
+@media (min-width: 820px) {
+  .cmp-panel {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: min(430px, 40vw);
+    border-left: 1px solid var(--gold);
+    padding: 3.4rem 2.8rem;
+    transform: translateX(112%);
+    box-shadow: -18px 0 50px rgba(42, 31, 20, 0.16);
+  }
+  .cmp-panel[data-open="true"] { transform: none; }
+  .cmp-scrim { display: none; }
+}
+
+@media (max-width: 819px) {
+  .cmp-panel {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 70vh;
+    border-top: 1px solid var(--gold);
+    border-radius: 10px 10px 0 0;
+    padding: 1.8rem 1.4rem 2.4rem;
+    transform: translateY(112%);
+    box-shadow: 0 -14px 40px rgba(42, 31, 20, 0.22);
+  }
+  .cmp-panel[data-open="true"] { transform: none; }
+}
+
+/* ---------- The companion document ---------- */
+.dv-head { text-align: center; margin-bottom: 2.4rem; }
+
+/* Site prose is justified; the header lines are centred instead. */
+.dv-head p { text-align: center; }
+
+.dv-eyebrow {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.9rem;
+}
+
+.dv-title {
+  font-family: 'Cinzel', serif;
+  border: none;
+  padding: 0;
+  margin: 0 0 0.7rem;
+  font-style: normal;
+  color: var(--ink);
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+}
+
+.dv-sub {
+  font-style: italic;
+  color: var(--ink-faded);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* Contents, built from the section headings by compass.js. */
+.dv-toc {
+  margin: 0 0 2.4rem;
+  padding: 1.1rem 0;
+  list-style: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+
+.dv-toc li { margin: 0 0 0.35rem; }
+.dv-toc li:last-child { margin-bottom: 0; }
+
+.dv-toc button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+
+.dv-toc button:hover { color: var(--gold-deep); }
+
+.compass-doc .dv-h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  /* the site sets h3 italic; these section rules stand upright */
+  font-style: normal;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  margin: 3rem 0 0.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 1.5rem;
+}
+
+.compass-doc .dv-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  margin: 1.8rem 0 0.6rem;
+}
+
+.compass-doc .dv-lede {
+  color: var(--ink-faded);
+  text-align: left;
+}
+
+.compass-doc .dv-note { color: var(--ink-faded); }
+
+/* A bolded term in the prose opens that term on the plate. */
+.compass-doc .dv-term {
+  cursor: pointer;
+  border-bottom: 1px dotted var(--gold);
+}
+
+.compass-doc .dv-term:hover { color: var(--crimson); border-bottom-color: var(--crimson); }
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 700px) {
+  /* At phone widths the plate shrinks below the point where its labels can
+     be read or tapped, so it is held at a legible size and panned instead. */
+  .compass-figure {
+    width: 100vw;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .compass-figure svg { width: 620px; }
+}
